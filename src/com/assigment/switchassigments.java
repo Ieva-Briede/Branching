@@ -30,7 +30,6 @@ public class switchassigments {
            Scanner scanner = new Scanner(System.in);
            System.out.println("Please write your grade (A, B, C, D, E or F): ");
            char yourGrade = scanner.next().toUpperCase().charAt(0);
-           //char.equalsIgnoreCase();
            switch (yourGrade) {
                case 'A':
                case 'B':
