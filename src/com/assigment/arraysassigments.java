@@ -1,6 +1,6 @@
 package com.assigment;
 
-import java.sql.SQLOutput;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class arraysassigments {
     public static void main(String[] args) {
         //Assigment_1();
         //Assigment_2();
-        Assigment_3();
+       Assigment_3();
 
     }
 
@@ -38,46 +38,47 @@ public class arraysassigments {
 
     static void Assigment_2() {
         int[] myArray = new int[]{10, 4, -4, 7, 0, 9, 1, 3, 7, -5};
-        int i = 0;
         int oddCount = 0;
         int sum = 0;
+        double averageValue = 0;
         int smallerThenAverage = 0;
-        for (i = 0; i < myArray.length; i++) {
+
+        for (int i = 0; i < myArray.length; i++) {
+
             if (myArray[i] < 0) {
                 System.out.println("Negative element: " + myArray[i]);
             }
         }
-        i = 0;
-        for (i = 0; i < myArray.length; i++) {
+        for (int i = 0; i < myArray.length; i++) {
             if (myArray[i] % 2 != 0) {
                 System.out.println("Odd element: " + myArray[i]);
                 oddCount++;
             }
         }
-        System.out.println("\nAmount of odd numbers are: " + oddCount + "\n");
+        System.out.println("Total amount of odd numbers are: " + oddCount + "\n");
 
         //Verify if there are multiple elements with the same value
-        i = 0;
-        for (i = 0; i < myArray.length; i++) {
+
+        for (int i = 0; i < myArray.length; i++) {
             for (int j = i + 1; j < myArray.length; j++) {
                 if (i != j && myArray[i] == myArray[j]) {
-                    System.out.println("There are equal values: \n" + myArray[j]);
+                    System.out.println("Elements with the same value: " + myArray[j]+"\n");
                 }
             }
         }
 
-        i = 0;
-        for (i = 0; i < myArray.length; i += 2) {
+        for (int i = 1; i < myArray.length; i += 2) {
             System.out.println("Every 2nd elemnt of array: " + myArray[i]);
         }
-        i = 0;
-        for (i = 0; i < myArray.length; i++) {
+        for (int i = 0; i < myArray.length; i++) {
             sum = sum + myArray[i];
-            if (myArray[i] <= ((double) sum / myArray.length)) {
+            averageValue = (double) sum / (double) myArray.length;
+            if (myArray[i] < averageValue) {
+                System.out.println(myArray[i]);
                 smallerThenAverage++;
             }
         }
-        System.out.println("\n Average value is " + (double) sum / myArray.length + "\n");
+        System.out.println("\n Average value is " + averageValue + "\n");
         System.out.println(smallerThenAverage + " elements are smaller then average");
     }
 
@@ -93,13 +94,14 @@ public class arraysassigments {
 
         for (int i = 0; i < grades.length; i++) {
             byte x = input.nextByte();
-            if (x > 10 || x < 0) {
-                System.out.println("Invalid value! Grades are in range from 0 to 10. Start again and input valid values!");
-                return;
-            } else
+            while (x >= 11 || x < 0) {
+                System.out.println("Invalid value! Enter valid value:");
+                x = input.nextByte();
+            }
                 grades[i] = x;
         }
         System.out.println("Grades you input" + Arrays.toString(grades));
+
         for (int i = 0; i < grades.length; i++) {
             if (grades[i] < 4) {
                 failed++;
