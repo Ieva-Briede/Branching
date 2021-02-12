@@ -7,8 +7,8 @@ import java.util.Scanner;
 public class arraysassigments {
     public static void main(String[] args) {
         //Assigment_1();
-        Assigment_2();
-       //Assigment_3();
+        //Assigment_2();
+       Assigment_3();
 
     }
 
@@ -117,87 +117,18 @@ public class arraysassigments {
         System.out.println("\n" + failed + " students failed exam");
         System.out.println("\n" + bestMark + " student(s) got the best mark A\n");
 
-        for (int i = 0; i < grades.length; i++) {
-            if (grades[i] == 0) {
-                frequency++;
+        for (int i = 0; i <= grades.length; i++){
+            frequency = 0;
+            for (int j = 0; j< grades.length; j++){
+                    if (grades[j] == i){
+                    frequency++;
+                }
             }
-        }
-            System.out.println(frequency + " students with grade 0");
-        frequency=0;
-        for (int i = 0; i < grades.length; i++) {
-            if (grades[i] == 1) {
-                frequency++;
-            }
-        }
-        System.out.println(frequency + " students with grade 1");
-        frequency=0;
-        for (int i = 0; i < grades.length; i++) {
-            if (grades[i] == 2) {
-                frequency++;
-            }
-        }
-        System.out.println(frequency + " students with grade 2");
-        frequency=0;
-        for (int i = 0; i < grades.length; i++) {
-            if (grades[i] == 3) {
-                frequency++;
-            }
-        }
-        System.out.println(frequency + " students with grade 3");
-        frequency=0;
-        for (int i = 0; i < grades.length; i++) {
-            if (grades[i] == 4) {
-                frequency++;
-            }
-        }
-        System.out.println(frequency + " students with grade 4");
-        frequency=0;
-        for (int i = 0; i < grades.length; i++) {
-            if (grades[i] == 5) {
-                frequency++;
-            }
-        }
-        System.out.println(frequency + " students with grade 5");
-        frequency=0;
-        for (int i = 0; i < grades.length; i++) {
-            if (grades[i] == 6) {
-                frequency++;
-            }
-        }
-        System.out.println(frequency + " students with grade 6");
-                frequency=0;
-        for (int i = 0; i < grades.length; i++) {
-            if (grades[i] == 7) {
-                frequency++;
-            }
-        }
-        System.out.println(frequency + " students with grade 7");
-        frequency=0;
-        for (int i = 0; i < grades.length; i++) {
-            if (grades[i] == 8) {
-                frequency++;
-            }
-        }
-        System.out.println(frequency + " students with grade 8");
-        frequency=0;
-        for (int i = 0; i < grades.length; i++) {
-            if (grades[i] == 9) {
-                frequency++;
-            }
-        }
-        System.out.println(frequency + " students with grade 9");
-        frequency=0;
-        for (int i = 0; i < grades.length; i++) {
-            if (grades[i] == 10) {
-                frequency++;
-            }
-        }
-        System.out.println(frequency + " students with grade 10");
+            System.out.println(frequency + " students with the grade " + i);
         }
 
-
-
         }
+}
 
 
 
