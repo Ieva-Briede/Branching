@@ -6,15 +6,15 @@ import java.util.Scanner;
 
 public class arraysassigments {
     public static void main(String[] args) {
-        //Assigment_1();
-        //Assigment_2();
-       Assigment_3();
+        //Assignment_1();
+        //Assignment_2();
+       Assignment_3();
 
     }
 
 
 
-    static void Assigment_1() {
+    static void Assignment_1() {
         int[] elements = new int[]{5, 3, 7, 6, 2, 8};
         for (int i = 0; i < elements.length; i++) {
             System.out.println("For loop: " + elements[i]);
@@ -36,7 +36,7 @@ public class arraysassigments {
         System.out.println("The best option would be for each loop");
     }
 
-    static void Assigment_2() {
+    static void Assignment_2() {
         int[] myArray = new int[]{10, 4, -4, 7, 0, 9, 1, 3, 7, -5};
         int oddCount = 0;
         int sum = 0;
@@ -68,7 +68,7 @@ public class arraysassigments {
         }
 
         for (int i = 1; i < myArray.length; i += 2) {
-            System.out.println("Every 2nd elemnt of array: " + myArray[i]);
+            System.out.println("Every 2nd element of array: " + myArray[i]);
         }
         for (int i = 0; i < myArray.length; i++) {
             sum = sum + myArray[i];
@@ -86,7 +86,7 @@ public class arraysassigments {
         System.out.println(smallerThenAverage + " elements are smaller then average");
     }
 
-    static void Assigment_3() {
+    static void Assignment_3() {
         byte[] grades = new byte[10];
         Scanner input = new Scanner(System.in);
         System.out.println("Write the grade: ");
