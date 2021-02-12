@@ -7,8 +7,8 @@ import java.util.Scanner;
 public class arraysassigments {
     public static void main(String[] args) {
         //Assigment_1();
-        //Assigment_2();
-       Assigment_3();
+        Assigment_2();
+       //Assigment_3();
 
     }
 
@@ -73,12 +73,16 @@ public class arraysassigments {
         for (int i = 0; i < myArray.length; i++) {
             sum = sum + myArray[i];
             averageValue = (double) sum / (double) myArray.length;
-            if (myArray[i] < averageValue) {
+        }
+        System.out.println("\n Average value is " + averageValue + "\n");
+        System.out.println("Smaller than average:");
+        for (int i = 0; i < myArray.length; i++) {
+        if (myArray[i] < averageValue) {
                 System.out.println(myArray[i]);
                 smallerThenAverage++;
             }
         }
-        System.out.println("\n Average value is " + averageValue + "\n");
+
         System.out.println(smallerThenAverage + " elements are smaller then average");
     }
 
